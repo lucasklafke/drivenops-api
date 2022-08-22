@@ -16,7 +16,7 @@ services:
     ports:
       - 5000:5000
     depends_on:
-      - db
+      - db_postgres
     env_file:
       - .env
 
@@ -34,8 +34,8 @@ services:
     volumes:
       - build_react:/var/www/html
     depends_on:
-      - postgres_drivenops_db
-      - node_drivenops_app
+      - db_postgres
+      - node_app
       - react_drivenops_app
 
 volumes:
