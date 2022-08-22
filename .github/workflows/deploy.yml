@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Create back-end env file
+      - name: Create back-end envfile
         uses: SpicyPizza/create-envfile@v1.3
         with:
           envkey_POSTGRES_USER: ${{secrets.POSTGRES_USER}}
